@@ -1,0 +1,32 @@
+name: CI API Firebase Functions
+
+on: [pull_request]
+
+jobs:
+  ci-api-firebase-functions:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - run: npm install
+        working-directory: ./functions
+      - run: npm run lint
+        working-directory: ./functions
+      - run: npm run build
+        working-directory: ./functions
+        env:
+          CI: true
