@@ -1,5 +1,17 @@
 {
   "projects": {
     "default": "next-web-technology-api"
+  },
+  "targets": {
+    "next-web-technology-api": {
+      "hosting": {
+        "node-list": [
+          "node-list"
+        ],
+        "price-info": [
+          "price-info"
+        ]
+      }
+    }
   }
 }

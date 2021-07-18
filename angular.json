@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "nodeList": {
+    "node-list": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -11,24 +11,24 @@
         }
       },
       "root": "",
-      "sourceRoot": "projects/nodeList/src",
+      "sourceRoot": "projects/node-list/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/nodeList",
-            "index": "projects/nodeList/src/index.html",
-            "main": "projects/nodeList/src/main.ts",
-            "polyfills": "projects/nodeList/src/polyfills.ts",
+            "outputPath": "dist/node-list",
+            "index": "projects/node-list/src/index.html",
+            "main": "projects/node-list/src/main.ts",
+            "polyfills": "projects/node-list/src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              "projects/nodeList/src/favicon.ico",
-              "projects/nodeList/src/assets"
+              "projects/node-list/src/favicon.ico",
+              "projects/node-list/src/assets"
             ],
             "styles": [
-              "projects/nodeList/src/custom-theme.scss",
-              "projects/nodeList/src/styles.css"
+              "projects/node-list/src/custom-theme.scss",
+              "projects/node-list/src/styles.css"
             ],
             "scripts": []
           },
@@ -48,8 +48,8 @@
               ],
               "fileReplacements": [
                 {
-                  "replace": "projects/nodeList/src/environments/environment.ts",
-                  "with": "projects/nodeList/src/environments/environment.prod.ts"
+                  "replace": "projects/node-list/src/environments/environment.ts",
+                  "with": "projects/node-list/src/environments/environment.prod.ts"
                 }
               ],
               "outputHashing": "all"
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "nodeList:build:production"
+              "browserTarget": "node-list:build:production"
             },
             "development": {
-              "browserTarget": "nodeList:build:development"
+              "browserTarget": "node-list:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,22 +80,22 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "nodeList:build"
+            "browserTarget": "node-list:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/nodeList/src/test.ts",
-            "polyfills": "projects/nodeList/src/polyfills.ts",
+            "main": "projects/node-list/src/test.ts",
+            "polyfills": "projects/node-list/src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "assets": [
-              "projects/nodeList/src/favicon.ico",
-              "projects/nodeList/src/assets"
+              "projects/node-list/src/favicon.ico",
+              "projects/node-list/src/assets"
             ],
             "styles": [
-              "projects/nodeList/src/styles.css"
+              "projects/node-list/src/styles.css"
             ],
             "scripts": []
           }
@@ -103,5 +103,5 @@
       }
     }
   },
-  "defaultProject": "nodeList"
+  "defaultProject": "node-list"
 }

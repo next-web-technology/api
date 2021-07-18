@@ -8,11 +8,11 @@
     ]
   },
   "files": [
-    "projects/nodeList/src/test.ts",
-    "projects/nodeList/src/polyfills.ts"
+    "projects/node-list/src/test.ts",
+    "projects/node-list/src/polyfills.ts"
   ],
   "include": [
-    "projects/nodeList/src/**/*.spec.ts",
-    "projects/nodeList/src/**/*.d.ts"
+    "projects/node-list/src/**/*.spec.ts",
+    "projects/node-list/src/**/*.d.ts"
   ]
 }
